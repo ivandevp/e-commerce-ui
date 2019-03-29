@@ -30,7 +30,7 @@ const isHome = id => id === 'home';
 
 const getPath = id => isHome(id) ? '' : id;
 
-const Header = () => (
+const Header = ({ cart }) => (
 	<header class={style.header}>
 		<h1>Preactishop</h1>
 		<nav>
@@ -43,8 +43,21 @@ const Header = () => (
 					</li>
 				))}
 			</ul>
-			<div>
-				Icons
+			<div class={style.cartSummary}>
+				Carrito ({cart.length})
+				<div class={style.cartDetail}>
+					{cart.map((product) => (
+						<div>
+							<div>
+								<img src={product.image} alt={product.title} />
+							</div>
+							<div>
+								<p>{product.title}</p>
+								<p>${product.price}</p>
+							</div>
+						</div>
+					))}
+				</div>
 			</div>
 		</nav>
 	</header>

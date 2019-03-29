@@ -69,3 +69,11 @@
 	color: #8F58A0;
 	font-weight: 900
 }
+
+.cartSummary:hover > .cartDetail {
+	display: block;
+}
+
+.cartDetail {
+	display: none;
+}

@@ -1,0 +1,30 @@
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.product {
+    list-style: none;
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.product > .title,
+.product > .author,
+.product > .image,
+.product > .addToCart {
+    display: block;
+}
+
+.product > .image {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.product > .addToCart {
+    margin: 10px auto;
+    width: 20%;
+    padding: 10px;
+    background-color: #77C3E4;
+}
